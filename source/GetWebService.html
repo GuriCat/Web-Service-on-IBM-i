@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>天気情報取得</title>
+</head>
+
+<body>
+    <h1>天気情報取得</h1>
+    <p>エリアコードを入力し、「情報を取得」をクリック。</p>
+    <form id="input_form">
+        <input type="text" , id="areacode" placeholder="6桁のコード" />
+        <input type="submit" value="情報を取得" />
+        <input type="button" id="reload" value="クリア" />
+    </form>
+    <br>
+    <hr> <br>
+    <p id="weather_time"></p>
+    <p id="weather_areaname"></p>
+    <p id="weather_info"></p>
+    <p id="error_msg"></p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById("reload").addEventListener("click", function () {
+                window.location.reload()
+            })
+        })
+
+        var form = document.getElementById('input_form')
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault()
+
+            fetch("https://www.jma.go.jp/bosai/forecast/data/overview_forecast/" +
+                document.getElementById('areacode').value + ".json")
+                .then(res => res.json())
+                .then(weather_json => {
+                    console.log(weather_json)
+                    weather_time.innerHTML = weather_json.reportDatetime
+                    weather_areaname.innerHTML = weather_json.targetArea
+                    weather_info.innerHTML = weather_json.text
+                    error_msg.innerText = ""
+                })
+                .catch(err => {
+                    weather_time.innerHTML = ""
+                    weather_areaname.innerHTML = ""
+                    weather_info.innerHTML = ""
+                    error_msg.innerText = "情報を取得できませんでした：" + err
+                })
+        })
+    </script>
+    
+</body>
+
+</html>
