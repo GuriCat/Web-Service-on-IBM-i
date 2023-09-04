@@ -1,6 +1,6 @@
 <!-- docs/_sidebar.md -->
 
-* <b>IBM iでWebサービス<br>ハンズオンの手引き</b>
+* <b>IBM i でWebサービス<br>ハンズオンの手引き</b>
 
 ---
 
