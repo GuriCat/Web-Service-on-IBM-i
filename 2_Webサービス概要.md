@@ -104,7 +104,7 @@ RESTアーキテクチャーに基づくWebサービスのイメージを下図�
 
 REST WebサービスではHTTP(Hypertext Transfer Protocol)でクライアントがサーバーに要求を行います。このリクエストの種類により、いくつかHTTPの「メソッド」が用意されています。
 
-?> RFC 7231(https://datatracker.ietf.org/doc/html/rfc7231)ではGET、POST、PUT、DELETE、HEAD、OPTIONS、TRACE、CONNECTの8つのメソッドを定義。
+?> RFC 7231(https://datatracker.ietf.org/doc/html/rfc7231 )ではGET、POST、PUT、DELETE、HEAD、OPTIONS、TRACE、CONNECTの8つのメソッドを定義。
 
 一般的に、主要なHTTPメソッドとWebサービス処理の対応は次のようになります。これらのメソッドはCRUDの基本機能にマッピングされます。なお、これらのメソッドの中でPOST(Create)のみが冪(べき)等ではありません。
 
