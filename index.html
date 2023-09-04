@@ -13,10 +13,24 @@
   <script>
     window.$docsify = {
       name: 'IBM iでWebサービス<BR>ハンズオンの手引き',
-      repo: '',
+      repo: 'https://guricat.github.io/Web-Service-on-IBM-i/#/',
       loadSidebar: true,
       subMaxLevel: 3,
       enableSidebarCollapse: false
+      autoHeader: true,
+
+      auto2top: true,
+
+      search: 'auto', // default
+      // complete configuration parameters
+      search: {
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: 'auto',
+        placeholder: '検索語を入力',
+        noData: '該当なし',
+        // Headline depth, 1 - 6
+        depth: 6,
+        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
     }
   </script>
 
