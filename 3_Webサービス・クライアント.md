@@ -607,7 +607,7 @@ IBM iではDCM (Digital Certificate Manager。ディジタル証明書マネー�
 
 ![参考_QSYS2のHTTP_APIでhttpsを利用3.jpg](/files/参考_QSYS2のHTTP_APIでhttpsを利用3.jpg)
 
-?> DCMはWebアプリケーションであり、ブラウザの操作が必要。デジタル証明書の運用をバッチ化する場合、オープンソース/無保証の「DCM Tools for IBM i」(https://github.com/ThePrez/DCM-tools)や、GSKit (gsk8capicmd_64などのコマンド)が稼働する他プラットフォームとの連携(IBM iでは動作不可)などの方法が考えられる。
+?> DCMはWebアプリケーションであり、ブラウザの操作が必要。デジタル証明書の運用をバッチ化する場合、オープンソース/無保証の「DCM Tools for IBM i」(https://github.com/ThePrez/DCM-tools )や、GSKit (gsk8capicmd_64などのコマンド)が稼働する他プラットフォームとの連携(IBM iでは動作不可)などの方法が考えられる。
 
 ?> DCMはIBM iのバージョン/PTFレベルによってUIが異なる。詳細は「How To Import Personal Certificates Into a Digital Certificate Manager Keystore on the IBM i OS」(https://www.ibm.com/support/pages/node/6515666 )などを参照。
 
