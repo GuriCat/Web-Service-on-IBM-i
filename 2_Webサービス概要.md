@@ -163,11 +163,11 @@ Db2 for iのSQLを利用すれば比較的容易にJSONやXMLの処理が可能�
 **(JSONの生成)**
 
 ```sql
-SELECT 
-    JSON_OBJECT('customer' VALUE 
+SELECT
+    JSON_OBJECT('customer' VALUE
         JSON_ARRAYAGG(
-            JSON_OBJECT('custNo' VALUE REGNO, 
-                        'custInfo' VALUE 
+            JSON_OBJECT('custNo' VALUE REGNO,
+                        'custInfo' VALUE
                 JSON_OBJECT(
                     'custNameKj' VALUE TRIM(KJNAME),
                     'custNameKana' VALUE TRIM(KNNAME),
@@ -185,21 +185,21 @@ SELECT
 **(XMLの生成)**
 
 ```sql
-SELECT 
+SELECT
     XMLSERIALIZE(
-        XMLELEMENT(NAME "customer", 
+        XMLELEMENT(NAME "customer",
             XMLAGG(
-                XMLELEMENT(NAME "custInfo", 
+                XMLELEMENT(NAME "custInfo",
                     XMLATTRIBUTES(RTRIM(REGNO) AS "custNo"),
                     XMLFOREST(
                         RTRIM(KJNAME,'　 ') AS "custNameKj",
-                        CAST(RTRIM(KNNAME) AS VARCHAR(100) FOR MIXED DATA) 
+                        CAST(RTRIM(KNNAME) AS VARCHAR(100) FOR MIXED DATA)
                                             AS "custNameKana",
                         RTRIM(ADDR1,'　 ') AS "custAddr1",
                         RTRIM(ADDR2,'　 ') AS "custAddr2"
-                    )          
-                ) 
-            ) 
+                    )
+                )
+            )
         ) AS CLOB(1G) INCLUDING XMLDECLARATION
     ) AS XMLOUT
   FROM WEBSXXLIB.PERSON
