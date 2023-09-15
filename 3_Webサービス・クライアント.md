@@ -613,7 +613,7 @@ IBM iではDCM (Digital Certificate Manager。ディジタル証明書マネー�
 
 <br>
 
-## 3.4 1ILE/OSS/SQLの連携
+## 3.4 ILE/OSS/SQLの連携
 
 この章で解説したcurlなどのOSSとILEプログラム、SQLのHTTP機能は、柔軟に組み合わせて利用できます。これらを連携してWebサービスのクライアントを実装した例を2つ紹介します。
 
