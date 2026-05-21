@@ -221,7 +221,7 @@ bash-5.1$
 ||HTTPメソッド|POST|
 ||取得レコード|複数|
 ||リクエスト|Body(JSON形式)|
-||SQL|SELECT * FROM WEBSxxLIB.PERSON WHERE KNNAME LIKE ? || '%'|
+||SQL|SELECT * FROM WEBSxxLIB.PERSON WHERE KNNAME LIKE ? \|\| '%'|
 <br>
 
 **□ W6-2.** 配置済みのサービスに新規Webサービスを追加するため、「配置済みサービスの管理」画面から実行中のサービス「person」を停止。「最新表示」をクリックして「状況」が「停止済み」になったら「再配置」をクリックしてウィザードを開始。
