@@ -676,7 +676,7 @@ bash-5.1$ curl -s -X POST 'http://ibmi:10134/web/services/person2/' -H 'Content-
 ?> 「HTTP サーバーの作成」ウィザードで作成するとhttpd.confはCCSID 13488 (UCS2)で作成される。一方で「Web Servicesサーバーの作成」ウィザードで作成されるhttpd.confはCCSID 1208 (UTF-8)となる。どちらが(あるいは「どちらも」)正しいのかは不明。
 
 ```
-> CMD('mkdir /www/websxx ; cd /www/websxx/ ; mkdir conf htdocs logs ; t
+> QSH CMD('mkdir /www/websxx ; cd /www/websxx/ ; mkdir conf htdocs logs ; t
   ouch -C 1208 /www/websxx/conf/httpd.conf')                               
    コマンドは終了状況 0 で正常に終了しました。                            
 ```
